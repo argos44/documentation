@@ -15,7 +15,7 @@ const Youtube = ({ title, src }) => {
         <div class="embedVideo-container">
           <iframe
             title={`${title} Video`}
-            src={`https://www.youtube.com/embed/${src}?rel=0"`}
+            src={src.includes('?') ? `https://www.youtube.com/embed/${src}&rel=0` : `https://www.youtube.com/embed/${src}?rel=0"`}
             className="embedVideo-iframe"
             allowfullscreen=""
             frameborder="0"
